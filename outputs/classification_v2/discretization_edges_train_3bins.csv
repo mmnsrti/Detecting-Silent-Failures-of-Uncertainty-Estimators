@@ -1,0 +1,4 @@
+feature,internal_edges,number_of_states
+question_words,"[10.0, 15.0]",3
+question_chars,"[55.0, 80.0]",3
+avg_option_words,"[1.4, 1.8]",3

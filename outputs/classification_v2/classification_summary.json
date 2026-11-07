@@ -1,0 +1,53 @@
+{
+  "task": "dataset_source_classification",
+  "class_mapping": {
+    "0": "CommonsenseQA",
+    "1": "ARC-Challenge"
+  },
+  "features": [
+    "question_words",
+    "question_chars",
+    "avg_option_words"
+  ],
+  "excluded_feature": "option_count",
+  "primary_classifier": "Bayesian Belief Network — TAN",
+  "baseline_classifier": "Naive Bayes Classifier",
+  "selected_n_bins": 3,
+  "laplace_alpha": 1.0,
+  "balanced_class_prior": true,
+  "final_root_feature": "question_chars",
+  "final_feature_parents": {
+    "question_words": "question_chars",
+    "question_chars": null,
+    "avg_option_words": "question_chars"
+  },
+  "final_tree_edges": [
+    {
+      "feature_a": "question_words",
+      "feature_b": "question_chars",
+      "conditional_mutual_information_nats": 0.5862852345961158
+    },
+    {
+      "feature_a": "question_chars",
+      "feature_b": "avg_option_words",
+      "conditional_mutual_information_nats": 0.006960577162491798
+    }
+  ],
+  "test_metrics": {
+    "BBN_TAN": {
+      "accuracy": 0.7768166089965398,
+      "balanced_accuracy": 0.7777079216813364,
+      "macro_precision": 0.7817876932050161,
+      "macro_recall": 0.7777079216813364,
+      "macro_f1": 0.7761727650147243
+    },
+    "NBC": {
+      "accuracy": 0.726643598615917,
+      "balanced_accuracy": 0.7274893718938986,
+      "macro_precision": 0.7305435458668973,
+      "macro_recall": 0.7274893718938986,
+      "macro_f1": 0.7259296772717212
+    }
+  },
+  "note": "This notebook classifies dataset source (CommonsenseQA vs ARC-Challenge). It does not detect LLM correctness or Silent Failure."
+}
