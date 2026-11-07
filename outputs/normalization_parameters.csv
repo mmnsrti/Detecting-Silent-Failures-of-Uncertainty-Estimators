@@ -1,0 +1,9 @@
+﻿dataset,feature,fitted_on,min,max,mean,population_std,decimal_exponent_j,constant_feature
+CommonsenseQA,question_words,train,3.0,63.0,13.252027512575712,5.518885016368952,2,False
+CommonsenseQA,question_chars,train,15.0,376.0,69.46689251616877,29.461593325004827,3,False
+CommonsenseQA,avg_option_words,train,1.0,6.0,1.5209526742634227,0.40938752783908006,1,False
+CommonsenseQA,option_count,train,5.0,5.0,5.0,0.0,1,True
+ARC-Challenge,question_words,train,5.0,111.0,21.858802502234138,13.711299124361117,3,False
+ARC-Challenge,question_chars,train,22.0,683.0,126.37176050044683,80.00665380970801,3,False
+ARC-Challenge,avg_option_words,train,1.0,18.5,4.901623473339291,3.205352891150638,2,False
+ARC-Challenge,option_count,train,3.0,5.0,4.0,0.04227659042900758,1,False

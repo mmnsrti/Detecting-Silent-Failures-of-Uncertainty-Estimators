@@ -1,0 +1,9 @@
+﻿dataset,feature,Quartile_1,Quartile_2,Quartile_3,Quartile_4
+CommonsenseQA,question_words,3.00 to 9.00,9.00 to 12.00,12.00 to 16.00,16.00 to 63.00
+CommonsenseQA,question_chars,15.00 to 48.00,48.00 to 64.00,64.00 to 84.00,84.00 to 376.00
+CommonsenseQA,avg_option_words,1.00 to 1.20,1.20 to 1.40,1.40 to 1.80,1.80 to 6.00
+CommonsenseQA,option_count,5.00 to 5.00,5.00 to 5.00,5.00 to 5.00,5.00 to 5.00
+ARC-Challenge,question_words,2.00 to 12.00,12.00 to 19.00,19.00 to 29.00,29.00 to 128.00
+ARC-Challenge,question_chars,13.00 to 69.00,69.00 to 108.50,108.50 to 170.75,170.75 to 831.00
+ARC-Challenge,avg_option_words,1.00 to 2.00,2.00 to 4.75,4.75 to 7.00,7.00 to 28.25
+ARC-Challenge,option_count,3.00 to 4.00,4.00 to 4.00,4.00 to 4.00,4.00 to 5.00

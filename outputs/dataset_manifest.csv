@@ -1,0 +1,7 @@
+dataset,split,file,rows,size_bytes
+CommonsenseQA,test,data\test-00000-of-00001.parquet,1140,151227
+CommonsenseQA,train,data\train-00000-of-00001.parquet,9741,1247103
+CommonsenseQA,validation,data\validation-00000-of-00001.parquet,1221,160240
+ARC-Challenge,test,ARC-Challenge\test-00000-of-00001.parquet,1172,203808
+ARC-Challenge,train,ARC-Challenge\train-00000-of-00001.parquet,1119,189909
+ARC-Challenge,validation,ARC-Challenge\validation-00000-of-00001.parquet,299,55743

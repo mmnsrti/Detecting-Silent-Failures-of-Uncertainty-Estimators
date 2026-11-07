@@ -1,0 +1,45 @@
+{
+  "task": "dataset origin classification (NOT silent failure detection)",
+  "model": "discrete Bayesian Belief Network with manually estimated CPTs and Laplace smoothing",
+  "features": [
+    "question_words",
+    "question_chars",
+    "avg_option_words"
+  ],
+  "excluded_feature": "option_count",
+  "classes": {
+    "CommonsenseQA": 0,
+    "ARC-Challenge": 1
+  },
+  "n_train_balanced": 2238,
+  "n_test": 2312,
+  "accuracy": 0.8183391003460208,
+  "balanced_accuracy": 0.819693431531046,
+  "confusion_matrix": [
+    [
+      1046,
+      94
+    ],
+    [
+      326,
+      846
+    ]
+  ],
+  "train_bins": {
+    "question_words": [
+      10.0,
+      14.0,
+      21.0
+    ],
+    "question_chars": [
+      56.0,
+      78.0,
+      119.0
+    ],
+    "avg_option_words": [
+      1.25,
+      1.8,
+      4.75
+    ]
+  }
+}
