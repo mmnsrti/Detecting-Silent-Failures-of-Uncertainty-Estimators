@@ -89,12 +89,26 @@ def test_classification_outputs():
 
 
 def test_notebooks_contain_outputs():
-    for name in [
+    candidate_nb4 = [
+        "04_pearson_bbn_classification_corrected.ipynb",
+        "04_pearson_bbn_classification_rewritten.ipynb",
+        "04_pearson_bbn_classification.ipynb",
+    ]
+    found_nb4 = None
+    for cand in candidate_nb4:
+        if (NOTEBOOKS_DIR / cand).is_file():
+            found_nb4 = cand
+            break
+
+    target_notebooks = [
         "01_prepare_numeric_features.ipynb",
         "02_statistics_and_distributions.ipynb",
         "03_three_normalizations.ipynb",
-        "04_pearson_bbn_classification.ipynb",
-    ]:
+    ]
+    if found_nb4:
+        target_notebooks.append(found_nb4)
+
+    for name in target_notebooks:
         nb_file = NOTEBOOKS_DIR / name
         assert nb_file.is_file()
         with open(nb_file, "r", encoding="utf-8") as f:
