@@ -107,6 +107,8 @@ def test_notebooks_contain_outputs():
     ]
     if found_nb4:
         target_notebooks.append(found_nb4)
+    if (NOTEBOOKS_DIR / "05_svm_classification.ipynb").is_file():
+        target_notebooks.append("05_svm_classification.ipynb")
 
     for name in target_notebooks:
         nb_file = NOTEBOOKS_DIR / name

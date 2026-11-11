@@ -1,0 +1,56 @@
+{
+  "task": "dataset_source_classification",
+  "class_mapping": {
+    "0": "CommonsenseQA",
+    "1": "ARC-Challenge"
+  },
+  "features": [
+    "question_words",
+    "question_chars",
+    "avg_option_words"
+  ],
+  "excluded_feature": "option_count",
+  "split_counts": {
+    "train": {
+      "CommonsenseQA": 9741,
+      "ARC-Challenge": 1119
+    },
+    "validation": {
+      "CommonsenseQA": 1221,
+      "ARC-Challenge": 299
+    },
+    "test": {
+      "ARC-Challenge": 1172,
+      "CommonsenseQA": 1140
+    }
+  },
+  "scaling": "StandardScaler fitted on training data only; final fit on train+validation",
+  "class_weight": "balanced",
+  "validation_selection_metric": "macro_f1; tie-breakers: balanced_accuracy, accuracy",
+  "svm_linear": {
+    "C": 0.01,
+    "test_metrics": {
+      "accuracy": 0.8927335640138409,
+      "error_rate": 0.10726643598615915,
+      "balanced_accuracy": 0.893754864978145,
+      "macro_precision": 0.9011737325488115,
+      "macro_recall": 0.893754864978145,
+      "macro_f1": 0.8923273955058796
+    }
+  },
+  "svm_rbf": {
+    "C": 10.0,
+    "gamma": 1,
+    "test_metrics": {
+      "accuracy": 0.8905709342560554,
+      "error_rate": 0.10942906574394462,
+      "balanced_accuracy": 0.8917175618226454,
+      "macro_precision": 0.9012635178391392,
+      "macro_recall": 0.8917175618226454,
+      "macro_f1": 0.8900243007083398
+    }
+  },
+  "previous_baselines_included": true,
+  "previous_baselines_source": "classification_v3.zip from the previous Notebook 04 run",
+  "note": "This experiment classifies dataset source (CommonsenseQA vs ARC-Challenge). It does not directly measure LLM correctness, uncertainty estimation, or silent failures."
+}
